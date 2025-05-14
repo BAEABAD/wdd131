@@ -22,6 +22,6 @@ function setLastModified() {
 
 // Exécuter les fonctions lorsque le DOM est complètement chargé
 document.addEventListener('DOMContentLoaded', function() {
-    setCurrentYear();
-    setLastModified();
+    setLastModified();     setCurrentYear();
+
 });
