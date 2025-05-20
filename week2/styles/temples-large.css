@@ -1,0 +1,71 @@
+/* Large Screen Styles (768px and above) */
+@media (min-width: 768px) {
+  /* Header and Navigation */
+  .hamburger-menu, .close-menu {
+    display: none;
+  }
+  
+  nav {
+    display: block;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  nav ul {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+  
+  nav a {
+    padding: var(--space-xs) var(--space-sm);
+  }
+  
+  nav a:hover, nav a:focus {
+    transform: translateY(-2px);
+  }
+  
+  /* Main Content */
+  h1 {
+    font-size: 2.5rem;
+    margin: var(--space-lg) 0;
+  }
+  
+  /* Temple Grid - 2 columns for tablets */
+  .temple-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* Desktop Styles (1024px and above) */
+@media (min-width: 1024px) {
+  /* Larger spacing */
+  main {
+    padding: var(--space-lg);
+  }
+  
+  /* Temple Grid - 3 columns for desktop */
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Enhanced figure styles */
+  figure img {
+    height: 300px;
+  }
+  
+  figure:hover {
+    transform: scale(1.03);
+  }
+}
+
+/* Extra Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+  /* Temple Grid - Optional 4 columns for very large screens */
+  .temple-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
