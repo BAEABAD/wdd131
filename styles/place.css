@@ -1,0 +1,218 @@
+/* ===== BASE STYLES ===== */
+:root {
+    --primary: #F77F00; /* Ivorian orange */
+    --secondary: #009A44; /* Ivorian green */
+    --accent: #FFFFFF; /* White */
+    --text: #333333;
+    --background: #F9F9F9;
+    --card-bg: #FFFFFF;
+    --footer-bg: #2D2D2D;
+    --footer-text: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--accent);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0 0 10px 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Pseudo-element emoticon for desktop only */
+@media (min-width: 768px) {
+    h1::after {
+        content: " 🇨🇮";
+        font-size: 2rem;
+        vertical-align: middle;
+        margin-left: 0.5rem;
+    }
+}
+
+/* ===== HERO IMAGE ===== */
+.hero {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== CONTENT SECTIONS ===== */
+section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.data p {
+    margin-bottom: 0.8rem;
+}
+
+.data p strong {
+    color: var(--secondary);
+}
+
+/* ===== WEATHER SECTION ===== */
+.weather {
+    text-align: center;
+}
+
+.weather-icon {
+    margin: 1rem auto;
+    width: 50px;
+    height: 50px;
+}
+
+/* Hide SVG weather icon on desktop */
+@media (min-width: 768px) {
+    .weather-icon {
+        display: none;
+    }
+}
+
+.weather p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#wind-chill {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* ===== CULTURE SECTION ===== */
+.culture ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.culture li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.culture li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px 10px 0 0;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .data {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .weather {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .culture {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ===== ACCESSIBILITY FOCUS STATES ===== */
+a:focus, button:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    header, footer {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    .hero img {
+        display: none;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+} 

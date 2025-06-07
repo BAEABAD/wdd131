@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Ivory Coast - A vibrant West African nation known for its rich culture, stunning beaches, and delicious cuisine.">
+    <meta name="author" content="Aka Blehoue Aime Daniel">
+    <title>Ivory Coast | WDD131 Country Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+</head>
+<body>
+    <header>
+        <h1>Ivory Coast</h1>
+        <!-- Navigation if needed -->
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+    
+                <img src="images/ivory-coast-beach-default.webp" alt="Beautiful beach in Ivory Coast" loading="lazy">
+
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>Country Data</h2>
+            <p><strong>Population:</strong> 28 million</p>
+            <p><strong>Capital:</strong> Yamoussoukro (political), Abidjan (economic)</p>
+            <p><strong>Languages:</strong> French (official), Baoulé, Dioula, others</p>
+            <!-- Add more data -->
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-icon">
+                <!-- SVG for mobile only -->
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="orange">
+                    <path d="M12,2L4,12H20L12,2Z"/>
+                    <circle cx="12" cy="18" r="4"/>
+                </svg>
+            </div>
+            <p>Current Temp: <span id="temp">28</span>°C</p>
+            <p>Wind Speed: <span id="wind-speed">12</span> km/h</p>
+            <p>Wind Chill: <span id="wind-chill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="year"></span> | Aka Blehoue Aime Daniel | WDD131</p>
+        <p id="last-modified">Last Modified: </p>
+    </footer>
+    <script src="scriptes/place.js" defer></script>
+</body>
+</html>
