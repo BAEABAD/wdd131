@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+        <p>Your review has been submitted successfully</p>
+    </header>
+
+    <main>
+        <div class="confirmation">
+            <p>We appreciate your feedback. Your review helps us improve our products and services.</p>
+            <p id="reviewCount">You have submitted <span id="count">0</span> reviews.</p>
+            <a href="form.html" class="button">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Aka Blehoue Aime Daniel |</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scriptes/review.js"></script>
+    <script>
+        // Set current year and last modified date
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en=us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+        <p>Share your experience with our products</p>
+    </header>
+
+    <main>
+        <form id="reviewForm" method="get" action="review.html">
+            <fieldset>
+                <legend>Product Information</legend>
+                
+                <div class="form-group">
+                    <label for="productName">Product Name*</label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product...</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Overall Rating*</label>
+                    <div class="rating-container">
+                        <div class="rating-option">
+                            <input type="radio" id="rating1" name="rating" value="1" required>
+                            <label for="rating1">1 ☆</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="rating2" name="rating" value="2">
+                            <label for="rating2">2 ☆</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="rating3" name="rating" value="3">
+                            <label for="rating3">3 ☆</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="rating4" name="rating" value="4">
+                            <label for="rating4">4 ☆</label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" id="rating5" name="rating" value="5">
+                            <label for="rating5">5 ☆</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="installDate">Date of Installation*</label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Review Details</legend>
+                
+                <div class="form-group">
+                    <label>Useful Features (check all that apply)</label>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="feature1" name="usefulFeatures" value="Easy Installation">
+                            <label for="feature1">Easy Installation</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature2" name="usefulFeatures" value="Durability">
+                            <label for="feature2">Durability</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature3" name="usefulFeatures" value="Performance">
+                            <label for="feature3">Performance</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature4" name="usefulFeatures" value="Design">
+                            <label for="feature4">Design</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature5" name="usefulFeatures" value="Value for Money">
+                            <label for="feature5">Value for Money</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="writtenReview">Written Review</label>
+                    <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Share your thoughts about the product..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" name="userName" placeholder="Optional">
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Aka Blehoue Aime Daniel |</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scriptes/form.js"></script>
+    <script>
+        // Set current year and last modified date
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
